@@ -1,0 +1,123 @@
+.logo img {
+  width: 50px;
+}
+a {
+  color: var(--white-color);
+}
+#nav {
+  background: transparent;
+}
+.nav-logo {
+  display: none;
+  justify-content: center;
+  text-align: center;
+  width: 50px;
+  margin-left: 0.09rem;
+}
+.nav-logo img {
+  width: 60px;
+}
+.menu-icon i {
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+#close-icon {
+  color: #fff;
+  font-size: 7rem;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 2rem;
+  display: none;
+}
+.navigation ul li {
+  background: none;
+  cursor: pointer;
+  border-radius:10px;
+  transition: 0.2s;
+}
+.navigation ul li a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.navigation ul li:hover {
+  background: blue;
+}
+.navigation ul li:nth-child(3) {
+  padding: 0rem;
+  background: none;
+}
+@media (max-width: 560px) {
+  .nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  #close-icon {
+    display: flex;
+  }
+  .navigation ul li:nth-child(3) {
+    display: none;
+  }
+  .nav-logo {
+    display: block;
+  }
+  .menu-icon {
+    transition: All 0.5s;
+    height: 100%;
+  }
+  .menu-icon i {
+    color: #fff;
+    display: initial;
+    font-size: 3rem;
+  }
+  .navigation .flex {
+    flex-direction: column;
+  }
+  .menu-icon:hover {
+    transform: scale(1.1);
+  }
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: -200%;
+    right: 0;
+    width: 100%;
+    transition: all 0.5s;
+    background: #000;
+    bottom: 0;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation.active {
+    left: 0;
+  }
+  .navigation ul li {
+    width: 10rem;
+    background: var(--blue-color);
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    border-radius:2px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius:30px;
+  }
+  .navigation ul li:hover {
+    background: hsl(240, 78%, 70%);
+  }
+}
